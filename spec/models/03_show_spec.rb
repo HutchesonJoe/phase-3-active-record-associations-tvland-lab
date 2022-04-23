@@ -1,3 +1,4 @@
+
 describe Show do
 
   it "has a name, day, season and genre" do
@@ -26,6 +27,7 @@ describe Show do
     it "returns the network that the show belongs to" do
       show = Show.create(name: "Community", day: "Thursday", season: "Winter", genre: "Comedy")
       network = show.build_network(call_letters: "NBC")
+      # binding.pry
       expect(show.network).to eq(network)
     end
   end
